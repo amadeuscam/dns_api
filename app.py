@@ -49,6 +49,7 @@ def get_resolucion(dominio):
 
 @app.route('/history', methods=['GET'])
 def get_history():
+    """ devuelve el historial de las peticiones  """
     return jsonify(lst_regitser), 200
 
 if __name__ == '__main__':
