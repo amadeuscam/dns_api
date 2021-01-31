@@ -43,14 +43,13 @@ def get_resolucion(dominio):
             return jsonify(data), 200
         else:
             return jsonify({"message": "No valid domain name"}), 400
-    else:
-        return "Se recibió un POST"
 
 
 @app.route('/history', methods=['GET'])
 def get_history():
     """ devuelve el historial de las peticiones  """
     return jsonify(lst_regitser), 200
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
